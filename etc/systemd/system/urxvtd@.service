@@ -1,5 +1,5 @@
 # Need to pass user when enabling service:
-# systemctl enable urxvtd@dbushev
+# systemctl enable urxvtd@dbushev.service
 [Unit]
 Description=RXVT-Unicode Daemon
 
