@@ -52,27 +52,18 @@ configure_packages () {
     xf86-input-synaptics \
     xorg-xinit \
     xterm \
+    ntp \
     i3 \
     alsa-utils \
-    ntp \
-    tlp \
-    smartmontools \
-    zsh \
-    chromium \
-    vim \
-    yaourt \
-    rxvt-unicode \
-    urxvt-perls \
-    git \
-    atool \
-    zip \
-    unzip
+    yaourt
 
+  # Users packages
   echo "aur"
   yaourt -Sy \
-    aurvote \
     dmenu2 \
     xbindkeys \
+    tlp \
+    smartmontools \
     ttf-dejavu \
     ttf-ubuntu-font-family \
     ttf-freefont \
@@ -84,7 +75,18 @@ configure_packages () {
     lxappearance \
     gnome-themes-standard \
     zukitwo-themes \
+    xcursor-openzone
+
+  yaourt -Sy \
+    aurvote \
+    zsh \
+    chromium \
     chromium-pepper-flash \
+    vim \
+    rxvt-unicode \
+    urxvt-perls \
+    git \
+    atool \
     jdk
 }
 
@@ -97,8 +99,10 @@ configure_system () {
 
 configure_manual () {
   echo "manual configuration:"
+  echo "bluetooth off"
   echo "lxappearance"
-  echo "  theme: zukitwo-themes"
+  echo "  theme: zukitwo"
+  echo "  cursor: openzone black"
 }
 
 initialize $@
