@@ -42,6 +42,8 @@ initialize () {
 
 configure_packages () {
   echo "installing packages"
+  echo "wifi-menu"
+  pacman -Sy wpa_supplicant dialog
   echo "base"
   pacman -Sy \
     base-devel \
@@ -55,6 +57,7 @@ configure_packages () {
     ntp \
     i3 \
     alsa-utils \
+    sudo \
     yaourt
 
   # Users packages
@@ -63,6 +66,7 @@ configure_packages () {
     dmenu2 \
     xbindkeys \
     tlp \
+    ethtool \
     smartmontools \
     ttf-dejavu \
     ttf-ubuntu-font-family \
@@ -87,6 +91,7 @@ configure_packages () {
     urxvt-perls \
     git \
     atool \
+    htop \
     jdk
 }
 
