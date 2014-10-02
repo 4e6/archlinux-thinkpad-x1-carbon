@@ -51,6 +51,7 @@ configure_packages () {
     xorg-server \
     xorg-server-utils \
     xf86-video-intel \
+    libva-intel-driver \
     xf86-input-synaptics \
     xorg-xinit \
     xterm \
